@@ -1,8 +1,8 @@
 public class MovieManager {
-    private String[] movies = new String[0]; //все фильмы должны храниться внутри массива в поле самого менеджера
+    private String[] movies = new String[0];
     private int amount;
 
-    public MovieManager() { //constr
+    public MovieManager() {
         this.amount = 5;
     }
 
@@ -10,15 +10,15 @@ public class MovieManager {
         this.amount = amount;
     }
 
-    public void add(String movie) {
+    public void addFilm(String movie) {
         String[] tmp = new String[movies.length + 1];
 
         for (int i = 0; i < movies.length; i++) {
             tmp[i] = movies[i];
         }
-        tmp[tmp.length - 1] = movie; //заполнить последнюю ячейку
+        tmp[tmp.length - 1] = movie;
         movies = tmp;
-    }//добавляет фильм в массив
+    }
 
     public String[] findAll() {
         String[] reversed = new String[movies.length];
@@ -26,7 +26,7 @@ public class MovieManager {
             reversed[i] = movies[movies.length - 1 - i];
         }
         return reversed;
-    }//выведет массив в порядке добавления
+    }
 
     public String[] findLast() {
         int resultLength;
@@ -36,9 +36,9 @@ public class MovieManager {
             resultLength = amount;
         }
         String[] result = new String[resultLength];
-        for (int i = 0; i < result.length; i++) {
+        for (int i = 0; i < resultLength; i++) {
             result[i] = movies[movies.length - 1 - i];
         }
         return result;
-    }//последние фильмы в массиве
+    }
 }
