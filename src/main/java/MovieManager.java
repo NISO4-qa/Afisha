@@ -1,4 +1,4 @@
-public class MovieManager {
+public class MovieManager  {
     private String[] movies = new String[0];
     private int amount;
 
@@ -41,4 +41,4 @@ public class MovieManager {
         }
         return result;
     }
-}
+}////
